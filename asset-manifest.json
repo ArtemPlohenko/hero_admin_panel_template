@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.f0d37abc.chunk.css",
+    "main.js": "/my-app/static/js/main.aa881bbb.chunk.js",
+    "main.js.map": "/my-app/static/js/main.aa881bbb.chunk.js.map",
+    "runtime-main.js": "/my-app/static/js/runtime-main.43d5011d.js",
+    "runtime-main.js.map": "/my-app/static/js/runtime-main.43d5011d.js.map",
+    "static/css/2.f642c650.chunk.css": "/my-app/static/css/2.f642c650.chunk.css",
+    "static/js/2.7ab02dfe.chunk.js": "/my-app/static/js/2.7ab02dfe.chunk.js",
+    "static/js/2.7ab02dfe.chunk.js.map": "/my-app/static/js/2.7ab02dfe.chunk.js.map",
+    "index.html": "/my-app/index.html",
+    "static/css/2.f642c650.chunk.css.map": "/my-app/static/css/2.f642c650.chunk.css.map",
+    "static/css/main.f0d37abc.chunk.css.map": "/my-app/static/css/main.f0d37abc.chunk.css.map",
+    "static/js/2.7ab02dfe.chunk.js.LICENSE.txt": "/my-app/static/js/2.7ab02dfe.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/my-app/static/media/hero_bg.0540b794.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43d5011d.js",
+    "static/css/2.f642c650.chunk.css",
+    "static/js/2.7ab02dfe.chunk.js",
+    "static/css/main.f0d37abc.chunk.css",
+    "static/js/main.aa881bbb.chunk.js"
+  ]
+}
