@@ -10,11 +10,6 @@ import Spinner from "../spinner/Spinner";
 
 import "./heroesList.scss";
 
-// Задача для этого компонента:
-// При клике на "крестик" идет удаление персонажа из общего состояния
-// Усложненная задача:
-// Удаление идет и с json файла при помощи метода DELETE
-
 const HeroesList = () => {
   const filteredHeroesSelector = createSelector(
     (state) => state.filters.activeFilter,
@@ -28,21 +23,13 @@ const HeroesList = () => {
     }
   );
 
-  // const filteredHeroes = useSelector((state) => {
-  //   if (state.filters.activeFilter === "all") {
-  //     return state.heroes.heroes;
-  //   } else {
-  //     return state.heroes.heroes.filter((item) => item.element === state.filters.activeFilter);
-  //   }
-  // });
-
   const filteredHeroes = useSelector(filteredHeroesSelector);
-  const heroesLoadingStatus = useSelector((state) => state.heroesLoadingStatus);
+  const heroesLoadingStatus = useSelector((state) => state.heroes.heroesLoadingStatus);
   const dispatch = useDispatch();
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(heroesFetching());
+    dispatch("HEROES_FETCHING");
     request("http://localhost:3001/heroes")
       .then((data) => dispatch(heroesFetched(data)))
       .catch(() => dispatch(heroesFetchingError()));
@@ -50,12 +37,8 @@ const HeroesList = () => {
     // eslint-disable-next-line
   }, []);
 
-  // Функция берет id и по нему удаляет ненужного персонажа из store
-  // ТОЛЬКО если запрос на удаление прошел успешно
-  // Отслеживайте цепочку действий actions => reducers
   const onDelete = useCallback(
     (id) => {
-      // Удаление персонажа по его id
       request(`http://localhost:3001/heroes/${id}`, "DELETE")
         .then((data) => console.log(data, "Deleted"))
         .then(dispatch(heroDeleted(id)))
